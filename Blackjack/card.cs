@@ -6,7 +6,6 @@ namespace Blackjack
 {
     class card
     {
-        public string name;
         public int value;
         public int index;
         public string suit;

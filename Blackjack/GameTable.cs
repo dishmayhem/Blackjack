@@ -15,13 +15,13 @@ namespace Blackjack
         public GameTable()
         {
             InitializeComponent();
-            dealer Dealer = new dealer();
-            Dealer.deck = Dealer.buildDeck(1);
+            dealer Dealer = new dealer(1);
+           
 
             StringBuilder show = new StringBuilder();
             foreach (card c in Dealer.deck)
             {
-                show.AppendLine(c.face + " of " + c.suit + "value:" + c.value + " index:" + c.index);
+                show.AppendLine(c.face + " of " + c.suit + " value:" + c.value + " index:" + c.index);
             }
             label1.Text = show.ToString();
         }
