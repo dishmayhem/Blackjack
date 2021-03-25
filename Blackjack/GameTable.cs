@@ -16,13 +16,19 @@ namespace Blackjack
         {
             InitializeComponent();
             dealer Dealer = new dealer(1);
-           
+
+            int[] index = Dealer.shuffle();
 
             StringBuilder show = new StringBuilder();
-            foreach (card c in Dealer.deck)
+            //foreach (card c in Dealer.deck)
+            //{
+            //    show.AppendLine(c.face + " of " + c.suit + " value:" + c.value + " index:" + c.index);
+            //}
+            foreach (int i in index)
             {
-                show.AppendLine(c.face + " of " + c.suit + " value:" + c.value + " index:" + c.index);
+                show.AppendLine(index[i].ToString());
             }
+
             label1.Text = show.ToString();
         }
     }
